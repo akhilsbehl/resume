@@ -1,0 +1,242 @@
+% LaTeX Curriculum Vitae Template
+%
+% Copyright (C) 2004-2009 Jason Blevins <jrblevin@sdf.lonestar.org>
+% http://jblevins.org/projects/cv-template/
+%
+% You may use use this document as a template to create your own CV
+% and you may redistribute the source code freely. No attribution is
+% required in any resulting documents. I do ask that you please leave
+% this notice and the above URL in the source code if you choose to
+% redistribute this file.
+
+\documentclass[a4paper,10pt]{article}
+
+\usepackage{hyperref}
+\usepackage{geometry}
+
+% Comment the following lines to use the default Computer Modern font
+% instead of the Palatino font provided by the mathpazo package.
+% Remove the 'osf' bit if you don't like the old style figures.
+\usepackage[T1]{fontenc}
+\usepackage[sc,osf]{mathpazo}
+
+% Set your name here
+\def\name{Akhil S. Behl}
+
+% Replace this with a link to your CV if you like, or set it empty
+% (as in \def\footerlink{}) to remove the link in the footer:
+\def\footerlink{}
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor = blue,
+  pdfauthor = {\name},
+  pdfkeywords = {economics, statistics, mathematics, machine learning, big data},
+  pdftitle = {Resume: \name},
+  pdfsubject = {Resume},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+  body={6in, 9in},
+}
+
+% Customize page headers
+\pagestyle{myheadings}
+\markright{\name}
+\thispagestyle{empty}
+
+% Custom section fonts
+\usepackage{sectsty}
+\sectionfont{\rmfamily\mdseries\Large}
+\subsectionfont{\rmfamily\mdseries\itshape\large}
+
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+% Format abbreviations
+\newcommand{\abbrv}[1]{\textsc{#1}}
+
+% Make lists without bullets
+\renewenvironment{itemize}{
+\begin{list}{}{
+  \setlength{\leftmargin}{1.5em}
+  }
+  }{
+\end{list}
+}
+
+\begin{document}
+
+% Place name at left
+{\huge \name}
+
+% Alternatively, print name centered and bold:
+%\centerline{\huge \bf \name}
+
+\vspace{0.25in}
+
+\begin{minipage}{0.45\linewidth}
+  A13, Sai Shakti, Sai Baba Complex \\
+  Mohan Gokhale Road, Goregaon East \\
+  Mumbai (400 065), \abbrv{mh, india} \\
+\end{minipage}
+\hspace*{0.8in}
+\begin{minipage}{0.45\linewidth}
+  \vspace*{-\baselineskip}
+  \begin{tabular}{ll}
+    Phone: & \tt +91 77 388 03 588 \\
+    Email: & \href{mailto:akhilsbehl@gmail.com}{\tt akhilsbehl@gmail.com} \\
+    Homepage: & \href{http://akhilsbehl.github.io}{\tt akhilsbehl.github.io} \\
+  \end{tabular}
+\end{minipage}
+
+\section*{Objective}
+Affiliate with a data science unit with a mandate of creating intellectual
+property and products using rigorous research and best practices.
+
+\section*{Work Experience}
+\small{
+\begin{itemize}
+  \item \textbf{Data Scientist} at Fractal Sciences, August 2013 - Present \\
+    \href{http://fractalanalytics.com}{Fractal Analytics}, Mumbai
+    \begin{itemize}
+      \item Developed text classification infrastructure in Python (text
+        processing) \& R (machine classification) to mine probability of
+        successful subrogation from field notes of agents for a global
+        insurance giant. Exceeded client benchmark of 80\% accuracy.
+        \emph{Highlights}: SVM
+        (\href{http://www.csie.ntu.edu.tw/~cjlin/libsvm/}{libsvm} \&
+        \href{http://www.csie.ntu.edu.tw/~cjlin/liblinear/}{liblinear}),
+        sparse-matrix computation,
+        \href{http://cran.r-project.org/web/packages/Rcpp/index.html}{RCPP}.
+      \item Provided on-site consulting for predicting product supply Case Fill
+        Rate for one of the biggest global CPG companies. \emph{Highlights}: 3+
+        TB data, Hive, HadoopStreaming with R \& Python, Markov Chain analysis,
+        Beta regression. (Retained as Technical Advisor for phase two of the
+        project.)
+      \item Retained as off-site Technical Advisor by the CPG client for
+        forecasting success of retail initiatives. The Fractal team won the
+        project against reputed international competitors. \emph{Highlights}:
+        TBs of POS data; Hive optimizations.
+      \item Co-developed a generic text-categorization algorithm and
+        independently programmed this as a Python package.
+      \item Protoyped and successfully marketed a fuzzy string matching
+        solution in Python to standardize transaction merchant names for a
+        major customer loyalty management firm.
+      \item Project manager and data scientist for a web application to design
+        and evaluate experiments in retail and CPG. Researched and programmed
+        the \href{www.hks.harvard.edu/fs/aabadie/ccsp.pdf}{synthetic control}
+        technique for the statistical kernel of the app.
+      \item Official R trainer for Fractal Analytics Academy: trained more than
+        75 new joinees.
+      \item Attended \href{http://university.cloudera.com/course/developer}
+        {Cloudera's developer training for Apache Hadoop}.
+    \end{itemize}
+    \vspace*{\baselineskip} %\\
+  \item \textbf{Research Associate}, September 2012 - July 2013 \\
+    \href{http://ifrogs.org}{Finance Research Group},
+    \href{http://www.igidr.ac.in}{IGIDR}, Mumbai
+    \begin{itemize}
+      \item Co-authored a
+        \href{http://ifrogs.org/releases/Thomasetal2013_systemicRisk.html}{policy
+        paper} on identification of Indian firms contributing to systemic risk
+        in the financial markets.
+      \item Co-author of a statistical package
+        \href{https://r-forge.r-project.org/projects/ifrogs/}{\emph{ifrogs}}
+        for the \href{http://www.r-project.org}{R statistical language}.
+      \item Presented an R implementation of the Model Confidence Set
+        econometric technique at the
+        \href{https://www.rmetrics.org/meielisalp2012}{6th RMetrics Conference
+        at ETH Zurich}.
+      \item Co-designer, developer, and maintainer of a tick-level
+        financial research database comprised of data from the National
+        Stock Exchange, India, and other sources.
+      \item Implemented a program to validate daily NSE tick-level data on
+        Trades and Orders in C \& Python. The framework has now been adopted by
+        the NSE for integration with their IT system.
+    \end{itemize}
+    \vspace*{\baselineskip} %\\
+    \newpage
+  \item \textbf{Consultant Analyst}, June 2010 - January 2011 \\
+    \href{http://www.cirm.in/} {Centre for Insurance \& Risk Management},
+    IFMR Research, Chennai
+    \begin{itemize}
+      \item Co-authored a
+        \href{http://www.munichre-foundation.org/dms/MRS/Documents/Microinsurance/2010_IMC/S11_MIC2010_Presentation_Behl.pdf}{paper}
+        on design of experiments to assess impact of health micro insurance on
+        low-income households.
+      \item Developed statistical analysis modules and reports focusing on
+        mining trend anomalies for
+        \href{http://www.rsby.gov.in/}{Rashtriya Swasthya Bima Yojana},
+        a pan-India state-sponsored third party payment health
+        insurance scheme.
+      \item Presented the paper and analysis mentioned above at the 6th
+        International Micro Insurance Conference, Manila, Phillipinnes.
+      \item Successfully completed \emph{Performance Consulting Skills}
+        training by Nigel Harrison of
+        \href{http://performconsult.co.uk/}{Performance Consulting}, UK.
+      \item Research lead for two projects. Responsibilities included managing
+        collaborations with project implementation, academic research, and
+        sponsor fund partners; managing contract services and field staff;
+        research design and supervision; data procurement, management and
+        analysis; publication and presentation of research.
+    \end{itemize}
+\end{itemize}}
+
+\section*{Education}
+\begin{itemize}
+  \item \textbf{MSc Economics}, Class of 2010, IGIDR, Mumbai, CGPA: 3.14/4.00.
+  \item \textbf{BSc Mathematics}, Class of 2008, Hansraj College, University of
+    Delhi, Score: 66.67\%.
+  \item \textbf{MPhil Economics}, August 2011 - September 2012, IGIDR, Mumbai
+    (\emph{Discontinued}).
+\end{itemize}
+
+\section*{Skills}
+\begin{itemize}
+  \item \textbf{Professional:}
+    Proficiency in verbal and written business communication; experience with
+    client and partner interaction; experience with technical consulting;
+    comfortable with both team work and leadership; organized, methodical and
+    punctual.
+  \item \textbf{Technical:}
+    \begin{itemize}
+      \item \emph{Statistical analyses}: exploratory data analysis; sampling;
+        hypothesis testing \& inference; regression analysis; univariate time
+        series analysis; monte carlo simulations; bootstrap simulations; design
+        of experiments.
+      \item \emph{Machine learning}: Supervised: logistic regression, CART,
+        random forests, gradient boosting machines, support vector machines;
+        Unsupervised: k-means clustering; Recommender systems: collaborative
+        filtering; Text mining: categorization; classification; fuzzy matching,
+        Evaluation methods: k-fold cross validation, LOOCV, cost-based
+        learning.
+      \item \emph{Mathematical}: modeling; optimization; real analysis; graph
+        theory; game theory.
+    \end{itemize}
+  \item \textbf{Personal:}
+    Self-driven and motivated; challenge seeking; hard-working; patient;
+    comfortable with different cultures and personalities.
+\end{itemize}
+
+\section*{Computation}
+\begin{itemize}
+  \item \textbf{Programming Languages}: R (advanced); Python (advanced); C
+    (intermediate); BASH scripting (advanced).
+  \item \textbf{Big Data Technologies}: CDH 4 \& 5; Hive; HadoopStreaming.
+  \item \textbf{Miscellaneous}: MySQL (intermediate); Django web framework
+    (intermediate).
+  \item \textbf{Office Suites}: MS Office; LibreOffice; OpenOffice; \LaTeX{}.
+  \item \textbf{Operating Systems}: Linux; MS Windows.
+\end{itemize}
+
+\end{document}
